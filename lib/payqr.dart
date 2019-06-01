@@ -20,7 +20,7 @@ class _PayQrState extends State<PayQr> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: new AppBar(
-          title: new Text('QR Code Scanner'),
+          title: new Text('Pay with QR'),
         ),
         body: new Center(
           child: Padding(

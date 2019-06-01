@@ -26,7 +26,7 @@ class _LoginState extends State<Login> {
               Padding(
                 padding: const EdgeInsets.all(24.0),
                 child: Text(
-                  "DompetQ",
+                  "DOMPETBAMBANK",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30.0,

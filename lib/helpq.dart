@@ -17,6 +17,10 @@ class _HelpQState extends State<HelpQ> {
         child: ListView(
           children: <Widget>[
             ListTile(
+              title: Text("Siapakah BAMBANK ini ?"),
+            ),
+            Divider(),
+            ListTile(
               title: Text("Bagaimana cara saya Top Up ?"),
             ),
             Divider(),

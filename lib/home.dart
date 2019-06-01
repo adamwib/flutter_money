@@ -14,19 +14,80 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.home),
-        title: Text("DompetQ"),
-        actions: <Widget>[
-          Center(child: Text("Rp. 1.000.000     ")),
-        ],
-      ),
-      body: ListView(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(24.0),
-            child: Column(
+    return WillPopScope(
+      onWillPop: () {},
+      child: Scaffold(
+        appBar: AppBar(
+          leading: Icon(Icons.home),
+          title: Text("DOMPETBAMBANK"),
+          actions: <Widget>[
+            Center(child: Text("Rp. 1.000.000     ")),
+          ],
+        ),
+        body: ListView(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PayQr()));
+                          },
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'images/pay.png',
+                                height: 100.0,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Pay",
+                                  style: TextStyle(fontSize: 16.0),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => TopUp()));
+                          },
+                          child: Column(
+                            children: <Widget>[
+                              Image.asset(
+                                'images/top-up.png',
+                                height: 100.0,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Top-Up",
+                                  style: TextStyle(fontSize: 16.0),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Column(
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -35,36 +96,46 @@ class _HomeState extends State<Home> {
                     children: <Widget>[
                       InkWell(
                         onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => PayQr()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Histori()));
                         },
                         child: Column(
                           children: <Widget>[
                             Image.asset(
-                              'images/pay.png',
+                              'images/history.png',
                               height: 100.0,
                             ),
-                            Text(
-                              "Pay",
-                              style: TextStyle(fontSize: 16.0),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "History",
+                                style: TextStyle(fontSize: 16.0),
+                              ),
                             )
                           ],
                         ),
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => TopUp()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Withdraw()));
                         },
                         child: Column(
                           children: <Widget>[
                             Image.asset(
-                              'images/top-up.png',
+                              'images/withdraw.png',
                               height: 100.0,
                             ),
-                            Text(
-                              "Top-Up",
-                              style: TextStyle(fontSize: 16.0),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "Withdraw",
+                                style: TextStyle(fontSize: 16.0),
+                              ),
                             )
                           ],
                         ),
@@ -74,106 +145,64 @@ class _HomeState extends State<Home> {
                 )
               ],
             ),
-          ),
-          Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Histori()));
-                      },
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/history.png',
-                            height: 100.0,
-                          ),
-                          Text(
-                            "History",
-                            style: TextStyle(fontSize: 16.0),
-                          )
-                        ],
+            Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Setting()));
+                        },
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'images/setting.png',
+                              height: 100.0,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "Setting",
+                                style: TextStyle(fontSize: 16.0),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Withdraw()));
-                      },
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/withdraw.png',
-                            height: 100.0,
-                          ),
-                          Text(
-                            "Withdraw",
-                            style: TextStyle(fontSize: 16.0),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              )
-            ],
-          ),
-          Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Setting()));
-                      },
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/setting.png',
-                            height: 100.0,
-                          ),
-                          Text(
-                            "Setting",
-                            style: TextStyle(fontSize: 16.0),
-                          )
-                        ],
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => HelpQ()));
-                      },
-                      child: Column(
-                        children: <Widget>[
-                          Image.asset(
-                            'images/help.png',
-                            height: 100.0,
-                          ),
-                          Text(
-                            "Help",
-                            style: TextStyle(fontSize: 16.0),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              )
-            ],
-          )
-        ],
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => HelpQ()));
+                        },
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'images/help.png',
+                              height: 100.0,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                "Help",
+                                style: TextStyle(fontSize: 16.0),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
