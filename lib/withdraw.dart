@@ -46,7 +46,7 @@ class _WithdrawState extends State<Withdraw> {
                   height: 16.0,
                 ),
                 TextFormField(
-                  keyboardType: TextInputType.phone,
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                       labelText: "No Rekening",
                       border: OutlineInputBorder(
