@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttermoney/payqr.dart';
+import 'package:fluttermoney/topup.dart';
 import 'package:fluttermoney/withdraw.dart';
 
 class Home extends StatefulWidget {
@@ -45,6 +46,11 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => TopUp()
+                        ));
+                      },
                       child: Column(
                         children: <Widget>[
                           Image.network(
