@@ -21,11 +21,11 @@ class _LoginState extends State<Login> {
               height: 100.0,
             ),
             Image.network(
-              "https://cdn-images-1.medium.com/max/1200/1*ilC2Aqp5sZd1wi0CopD1Hw.png",
+              "https://cdn.pixabay.com/photo/2018/10/03/11/31/wallet-3721156_960_720.png",
               height: 150.0,
             ),
             Text(
-              "Flutter Money",
+              "DompetQ",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
             ),
             SizedBox(

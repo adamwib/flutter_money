@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttermoney/home.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -19,20 +20,48 @@ class _RegisterState extends State<Register> {
                   "Silakan isi data pengguna",
                   style: TextStyle(fontSize: 20.0),
                 ),
+                SizedBox(
+                  height: 30.0,
+                ),
                 TextFormField(
-                  decoration: InputDecoration(labelText: "Masukan Nama"),
+                  decoration: InputDecoration(
+                      labelText: "Masukan Nama",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0))),
+                ),
+                SizedBox(
+                  height: 15.0,
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.phone,
+                  decoration: InputDecoration(
+                      labelText: "Masukan No Hp",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0))),
+                ),
+                SizedBox(
+                  height: 15.0,
                 ),
                 TextFormField(
                   obscureText: true,
-                  decoration: InputDecoration(labelText: "Masukan Password"),
+                  decoration: InputDecoration(
+                      labelText: "Masukan Password",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20.0))),
                 ),
                 SizedBox(
                   height: 50.0,
                 ),
                 MaterialButton(
                   color: Colors.pink[100],
-                  onPressed: () {},
-                  child: Text("Sign Up", style: TextStyle(color: Colors.white),),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home()));
+                  },
+                  child: Text(
+                    "Sign Up",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 )
               ],
             ),
