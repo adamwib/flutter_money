@@ -38,3 +38,17 @@ class _HelpQState extends State<HelpQ> {
     );
   }
 }
+
+class HelpDetail extends StatefulWidget {
+  @override
+  _HelpDetailState createState() => _HelpDetailState();
+}
+
+class _HelpDetailState extends State<HelpDetail> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
+    );
+  }
+}

@@ -55,7 +55,7 @@ class _RegisterState extends State<Register> {
                   height: 50.0,
                 ),
                 MaterialButton(
-                  color: Colors.pink[100],
+                  color: Colors.red,
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Home()));
