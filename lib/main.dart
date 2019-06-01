@@ -3,6 +3,7 @@ import 'package:fluttermoney/register.dart';
 
 void main() => runApp(MaterialApp(
       home: Login(),
+      debugShowCheckedModeBanner: false,
     ));
 
 class Login extends StatefulWidget {
