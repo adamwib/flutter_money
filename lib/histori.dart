@@ -14,46 +14,66 @@ class _HistoriState extends State<Histori> {
       ),
       body: ListView(
         children: <Widget>[
-          Card(
-            child: ListBody(
-              children: <Widget>[
-                Text("DompetQ Payment"),
-                Text("#DompetQ"),
-                Text("#id11111"),
-                SizedBox(
-                  height: 10.0,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Card(
+              child: ListTile(
+                leading: Icon(Icons.arrow_upward),
+                title: Text("DompetQ Payment"),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text("jenis transaksi"),
+                    Text("id Transaksi")
+                  ],
                 ),
-                Text(
+                trailing: Text(
                   "- Rp. 50.000",
                   style: TextStyle(color: Colors.red),
                 ),
-                SizedBox(
-                  height: 14.0,
-                ),
-                Text("1 Juni 2019, 07:11")
-              ],
+              ),
             ),
           ),
-          Card(
-            child: ListBody(
-              children: <Widget>[
-                Text("DompetQ Top Up"),
-                Text("#DompetQ"),
-                Text("#id11112"),
-                SizedBox(
-                  height: 10.0,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Card(
+              child: ListTile(
+                leading: Icon(Icons.arrow_downward),
+                title: Text("DompetQ Payment"),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text("jenis transaksi"),
+                    Text("id Transaksi")
+                  ],
                 ),
-                Text(
-                  "- Rp. 50.000",
+                trailing: Text(
+                  "+ Rp. 50.000",
                   style: TextStyle(color: Colors.green),
                 ),
-                SizedBox(
-                  height: 14.0,
-                ),
-                Text("1 Juni 2019, 07:11")
-              ],
+              ),
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Card(
+              child: ListTile(
+                leading: Icon(Icons.arrow_upward),
+                title: Text("DompetQ Payment"),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text("jenis transaksi"),
+                    Text("id Transaksi")
+                  ],
+                ),
+                trailing: Text(
+                  "- Rp. 50.000",
+                  style: TextStyle(color: Colors.red),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

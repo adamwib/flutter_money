@@ -12,7 +12,25 @@ class _HelpQState extends State<HelpQ> {
       appBar: AppBar(
         title: Text("Help"),
       ),
-      
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children: <Widget>[
+            ListTile(
+              title: Text("Bagaimana cara saya Top Up ?"),
+            ),
+            Divider(),
+            ListTile(
+              title: Text("Bagaimana cara bertransaksi ?"),
+            ),
+            Divider(),
+            ListTile(
+              title: Text("Bagaimana saya withdraw ?"),
+            ),
+            Divider(),
+          ],
+        ),
+      ),
     );
   }
 }

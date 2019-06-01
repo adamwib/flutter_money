@@ -9,6 +9,9 @@ class _WithdrawState extends State<Withdraw> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Withdraw'),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(
           20.0,
@@ -56,7 +59,7 @@ class _WithdrawState extends State<Withdraw> {
                   height: 20.0,
                 ),
                 MaterialButton(
-                  color: Colors.green[300],
+                  color: Colors.red,
                   onPressed: () {},
                   child: Text(
                     "Withdraw",

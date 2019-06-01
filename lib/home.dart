@@ -18,57 +18,62 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         leading: Icon(Icons.home),
         title: Text("DompetQ"),
-        actions: <Widget>[Center(child: Text("Rp. 1.000.000"))],
+        actions: <Widget>[
+          Center(child: Text("Rp. 1.000.000     ")),
+        ],
       ),
       body: ListView(
         children: <Widget>[
-          Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => PayQr()));
-                      },
-                      child: Column(
-                        children: <Widget>[
-                          Image.network(
-                            "http://dublinhire.com/wp-content/uploads/2015/10/dollar_coin_payment-512.png",
-                            height: 100.0,
-                          ),
-                          Text(
-                            "Pay",
-                            style: TextStyle(fontSize: 16.0),
-                          )
-                        ],
+          Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => PayQr()));
+                        },
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'images/pay.png',
+                              height: 100.0,
+                            ),
+                            Text(
+                              "Pay",
+                              style: TextStyle(fontSize: 16.0),
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => TopUp()));
-                      },
-                      child: Column(
-                        children: <Widget>[
-                          Image.network(
-                            "https://developer.jsbl.com/sites/all/themes/apigee_responsive_custom/images/overview-topup.png",
-                            height: 100.0,
-                          ),
-                          Text(
-                            "Top-Up",
-                            style: TextStyle(fontSize: 16.0),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              )
-            ],
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => TopUp()));
+                        },
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'images/top-up.png',
+                              height: 100.0,
+                            ),
+                            Text(
+                              "Top-Up",
+                              style: TextStyle(fontSize: 16.0),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
           Column(
             children: <Widget>[
@@ -84,12 +89,12 @@ class _HomeState extends State<Home> {
                       },
                       child: Column(
                         children: <Widget>[
-                          Image.network(
-                            "https://sitejerk.com/images/transaction.png",
+                          Image.asset(
+                            'images/history.png',
                             height: 100.0,
                           ),
                           Text(
-                            "Histori",
+                            "History",
                             style: TextStyle(fontSize: 16.0),
                           )
                         ],
@@ -104,8 +109,8 @@ class _HomeState extends State<Home> {
                       },
                       child: Column(
                         children: <Widget>[
-                          Image.network(
-                            "https://img.icons8.com/cotton/2x/insert-card--v1.png",
+                          Image.asset(
+                            'images/withdraw.png',
                             height: 100.0,
                           ),
                           Text(
@@ -134,8 +139,8 @@ class _HomeState extends State<Home> {
                       },
                       child: Column(
                         children: <Widget>[
-                          Image.network(
-                            "https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Settings-512.png",
+                          Image.asset(
+                            'images/setting.png',
                             height: 100.0,
                           ),
                           Text(
@@ -146,15 +151,14 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => HelpQ()
-                        ));
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => HelpQ()));
                       },
                       child: Column(
                         children: <Widget>[
-                          Image.network(
-                            "https://cdn2.iconfinder.com/data/icons/flat-style-svg-icons-part-1/512/confirmation_verification-512.png",
+                          Image.asset(
+                            'images/help.png',
                             height: 100.0,
                           ),
                           Text(
