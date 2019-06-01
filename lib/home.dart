@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fluttermoney/helpq.dart';
 import 'package:fluttermoney/histori.dart';
 import 'package:fluttermoney/payqr.dart';
+import 'package:fluttermoney/setting.dart';
 import 'package:fluttermoney/topup.dart';
 import 'package:fluttermoney/withdraw.dart';
 
@@ -28,10 +30,9 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => PayQr()
-                        ));
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => PayQr()));
                       },
                       child: Column(
                         children: <Widget>[
@@ -47,10 +48,9 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => TopUp()
-                        ));
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => TopUp()));
                       },
                       child: Column(
                         children: <Widget>[
@@ -78,10 +78,9 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => Histori()
-                        ));
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Histori()));
                       },
                       child: Column(
                         children: <Widget>[
@@ -97,10 +96,11 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => Withdraw()
-                        ));
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Withdraw()));
                       },
                       child: Column(
                         children: <Widget>[
@@ -127,29 +127,42 @@ class _HomeState extends State<Home> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Image.network(
-                          "https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Settings-512.png",
-                          height: 100.0,
-                        ),
-                        Text(
-                          "Setting",
-                          style: TextStyle(fontSize: 16.0),
-                        )
-                      ],
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Setting()));
+                      },
+                      child: Column(
+                        children: <Widget>[
+                          Image.network(
+                            "https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Settings-512.png",
+                            height: 100.0,
+                          ),
+                          Text(
+                            "Setting",
+                            style: TextStyle(fontSize: 16.0),
+                          )
+                        ],
+                      ),
                     ),
-                    Column(
-                      children: <Widget>[
-                        Image.network(
-                          "https://cdn2.iconfinder.com/data/icons/flat-style-svg-icons-part-1/512/confirmation_verification-512.png",
-                          height: 100.0,
-                        ),
-                        Text(
-                          "Help",
-                          style: TextStyle(fontSize: 16.0),
-                        )
-                      ],
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => HelpQ()
+                        ));
+                      },
+                      child: Column(
+                        children: <Widget>[
+                          Image.network(
+                            "https://cdn2.iconfinder.com/data/icons/flat-style-svg-icons-part-1/512/confirmation_verification-512.png",
+                            height: 100.0,
+                          ),
+                          Text(
+                            "Help",
+                            style: TextStyle(fontSize: 16.0),
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),

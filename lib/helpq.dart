@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Setting extends StatefulWidget {
+class HelpQ extends StatefulWidget {
   @override
-  _SettingState createState() => _SettingState();
+  _HelpQState createState() => _HelpQState();
 }
 
-class _SettingState extends State<Setting> {
+class _HelpQState extends State<HelpQ> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Setting"),
+        title: Text("Help"),
       ),
       
     );
