@@ -33,14 +33,18 @@ class _WithdrawState extends State<Withdraw> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20.0))),
                 ),
-                SizedBox(height: 16.0,),
+                SizedBox(
+                  height: 16.0,
+                ),
                 TextFormField(
                   decoration: InputDecoration(
                       labelText: "Nama Bank",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20.0))),
                 ),
-                SizedBox(height: 16.0,),
+                SizedBox(
+                  height: 16.0,
+                ),
                 TextFormField(
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(

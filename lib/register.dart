@@ -16,6 +16,7 @@ class _RegisterState extends State<Register> {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
+                SizedBox(height: 60.0,),
                 Text(
                   "Silakan isi data pengguna",
                   style: TextStyle(fontSize: 20.0),
@@ -23,6 +24,7 @@ class _RegisterState extends State<Register> {
                 SizedBox(
                   height: 30.0,
                 ),
+                SizedBox(height: 30.0,),
                 TextFormField(
                   decoration: InputDecoration(
                       labelText: "Masukan Nama",
