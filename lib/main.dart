@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttermoney/register.dart';
 
 void main() => runApp(MaterialApp(
       home: Login(),
@@ -53,7 +54,11 @@ class _LoginState extends State<Login> {
               padding: const EdgeInsets.only(left: 24.0, right: 24.0, top: 24.0),
               child: MaterialButton(
                 color: Colors.pink[100],
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => Register()
+                  ));
+                },
                 child: Row(
                   children: <Widget>[
                     Image.network(
